@@ -1,0 +1,137 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+body {
+    overflow:hidden;
+}
+
+/* SAYFANIN SOL TARAFI */
+.header {
+    width: 20%;
+    height: 100vh;
+    padding:1%;
+    float:left;
+    background-color: #f2f2f2;
+}
+.logo{
+    width:100%;
+    height:80px;
+}
+.logo img{
+    width:100%;
+    height:100%;
+}
+.menu{
+    width:100%;
+    margin-top:10%;
+}
+.menu ul{
+   display:flex;
+  justify-content:center;
+  align-content:center;
+  align-items:center;
+   flex-direction:column;
+}
+.menu ul li{
+   margin-top:5%;
+  list-style:none;
+    width:100%;
+    border: 1px solid #d40d12;
+    border-radius:20px;
+    margin-left:5px;
+    text-align:center;
+    display:inherit;
+}
+.menu ul li a{
+    width:100%;
+    text-decoration:none;
+    color:#d40d12;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    align-content:center;
+}
+.icon {
+    width:20%;
+}
+.icon img{
+    width:80%;
+    height:100%;
+    position:center;
+}
+.text{
+   font-size:1.3rem;
+   width:70%;
+}
+.menu ul li:hover {
+    color:#f2f2f2;
+    background-color: #d40d12;
+}
+.menu ul li:hover .text {
+    color: #f2f2f2;
+}
+footer{
+    text-align:center;
+    bottom:-20%;
+}
+
+/* SAYFANIN SAĞ TARAFI */
+.content {
+    width: 78%;
+    height: 100vh;
+    float: left;
+    background: url('../images/bg.jpg') no-repeat center;
+    background-size:cover;
+}
+.overlay{
+    width:100%;
+    height:100%;
+    background-color:rgba(0, 0, 0, .5);
+    position:absolute;
+    z-index:1;
+    display:flex;
+    justify-content:center;
+    align-content:center;
+}
+
+/* BOX STYLES */
+.box {
+    width: 20%;
+    margin:auto;
+    padding: 10%;
+    background-color: rgba(0, 0, 0, .1);
+}
+.inputs >*{
+    width:90%;
+    border:1px solid #f2f2f2;
+    padding:10px 20px;
+    margin-top:5%;
+    display:inline-block;
+}
+.inputs span a {
+    color: #1890ff;
+    text-decoration:none;
+}
+.inputs span {
+    text-align: right;
+    border: none;
+}
+.inputs .button {
+    width: 107%;
+    border-radius:5px;
+    cursor:pointer;
+    border:none;
+    color:white;
+    opacity:1;
+}
+.button:hover{
+    opacity:.8;
+}
+.bgGreen {background-color: #45b2ad;}
+.bgRed {background-color: #d40d12;}
+#poliklinikler,#doktorlar{width:108.5%;}
+#gvListele{
+    width:10%;
+}
