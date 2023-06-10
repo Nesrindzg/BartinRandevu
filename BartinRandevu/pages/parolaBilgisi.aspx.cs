@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -26,7 +26,7 @@ namespace BartinRandevu.pages
             baglanti.ConnectionString = strcon;
             baglanti.Open();
 
-            SqlCommand komut = new SqlCommand("sp_HastaBilgileriGetir", baglanti);
+            SqlCommand komut = new SqlCommand("sp_HastaTCveMailKontrol", baglanti);
             komut.CommandType = CommandType.StoredProcedure;
             komut.Parameters.AddWithValue("@hastaTC", hastaTC.Text.Trim());
             komut.Parameters.AddWithValue("@hastaMail", hastaMail.Text.Trim());
@@ -36,7 +36,7 @@ namespace BartinRandevu.pages
             if (oku.Read())
             {
                 string hastaSifre = oku["hastaSifre"].ToString();
-                string adSoyad = oku["hastaAdi"].ToString() + " " + oku["hastaSoyadi"].ToString();
+                string adSoyad = oku["adSoyad"].ToString();
 
                 MailMessage message = new MailMessage();
                 message.To.Add(hastaMail.Text.Trim());
